@@ -1,8 +1,9 @@
+// array of strings that will be used for buttons
 var topics = ["Vampire Diaries", "Grey's Anatomy", "Friends", "The Office", "Stranger Things", "Fresh off the Boat", "Scandal", 
 "The Walking Dead", "Riverdale", "The Flash", "Jane the Virgin", "Supernatural", "Orange is the New Black", "The Simpsons", "How I Met Your Mother",
 "Lucifer", "Gotham", "Modern Family", "LOST", "The Good Place", "Empire", "The Big Bang Theory", "Suits", "Criminal Minds", "Game of Thrones"];
 
-
+//function to display buttons
 function renderButtons() {
     $("#buttons-view").empty();
 
@@ -15,6 +16,7 @@ function renderButtons() {
     }
 }
 
+//function to display 10 gifs and ratings of the chosen TV show
 function displaySeriesInfo() {
 
 var series = $(this).attr("data-name");
@@ -44,6 +46,7 @@ $.ajax({
     });
 }
 
+// Function to display a new series button from the user input form
 $("#add-series").on("click", function(event) {
     event.preventDefault();
     var show = $("#series-input").val().trim();
@@ -51,10 +54,13 @@ $("#add-series").on("click", function(event) {
     renderButtons();
 });
 
+// on the click of a button with class series call the function to display gifs and info
 $(document).on("click", ".series", displaySeriesInfo);
 
+// call the function to display the buttons
 renderButtons();
 
+//on click of img with class "gif", function will play or pause gif
 $(document).on("click", ".gif", function() {
 
     var state = $(this).attr("data-state");
