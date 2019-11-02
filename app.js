@@ -7,9 +7,12 @@ var topics = ["Vampire Diaries", "Grey's Anatomy", "Friends", "The Office", "Str
 function renderButtons() {
     $("#buttons-view").empty();
 
+    $(".col-md-12").hide();
+
     for (var i = 0; i < topics.length; i++) {
         var a = $("<button>");
         a.addClass("series");
+        a.addClass("btn btn-info")
         a.attr("data-name", topics[i]);
         a.text(topics[i]);
         $("#buttons-view").append(a);
@@ -31,7 +34,7 @@ $.ajax({
     var results = response.data;
 
     for (var i = 0; i < results.length; i++) {
-    var showDiv = $("<div>");
+    var showDiv = $("<div>").addClass("imgDiv");
     var p = $("<p>").text("Rating: " + results[i].rating)
     var showImage = $("<img>");
     showImage.attr("src", results[i].images.fixed_height_still.url);

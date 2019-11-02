@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic!</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -14,19 +20,22 @@
 
     <div class = "container">
         <div>
-            <h1> Gif Search! </h1>
+            <h1> Gif Search - TV Shows! </h1>
         </div>
 
         <div id="buttons-view"></div>
 
         <form id="series-form">
-            <label for="series-input">Add a Show!</label>
+            <label for="series-input"></label>
             <input type="text" id="series-input"><br>
           
-            <input id="add-series" type="submit" value="Add a Show!">
+            <input id="add-series" type="submit" value="Add a Show!" class="btn btn-info">
         </form>
 
+        <div class="row">
         <div id="series-gifs-view"></div>
+        </div>
+    
 
     </div>
 </body>
